@@ -14,9 +14,15 @@ class CodicesSytema extends StatelessWidget {
   }
 }
 
-class MikugramApp extends StatelessWidget {
+class MikugramApp extends StatefulWidget {
   const MikugramApp({super.key});
 
+  @override
+  State<MikugramApp> createState() => _MikugramAppState();
+}
+
+class _MikugramAppState extends State<MikugramApp> {
+  int indice = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +44,45 @@ class MikugramApp extends StatelessWidget {
         ],
       ),
       body: const FeeadPage(),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        iconSize: 33,
+        type: BottomNavigationBarType.fixed,
+        onTap: (index) {
+          setState(() {
+            indice = index;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+              label: 'HomeFeed',
+              icon: Icon(
+                Icons.home_filled,
+              )),
+          BottomNavigationBarItem(
+              label: 'Buscara',
+              icon: Icon(
+                Icons.search,
+              )),
+          BottomNavigationBarItem(
+              label: 'Explore',
+              icon: Icon(
+                Icons.explore,
+              )),
+          BottomNavigationBarItem(
+              label: 'Shop',
+              icon: Icon(
+                Icons.shopping_bag_rounded,
+              )),
+          BottomNavigationBarItem(
+            label: 'Pefil',
+            icon: Icon(
+              Icons.photo_camera_front_outlined,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
