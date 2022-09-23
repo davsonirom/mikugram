@@ -1,4 +1,3 @@
-
 ![logo](https://user-images.githubusercontent.com/37612961/190645988-160f46df-da18-4fc8-84bb-e4b87a10ed7c.png)
 # Mikugram
 ## Criando um clone do Instagram (Layout) com os conhecimentos obtidos no primeiro projeto do curso de Flutter.
@@ -12,7 +11,15 @@
 
 - Criar a estrutura básica do layout da rede social Instagram.
 
+###### Referência
+![ref](https://user-images.githubusercontent.com/37612961/191878938-33fdfc27-8e89-4e3b-8ea2-4c1690fb228d.png)
+
 >O objetivo primordial é promover a prática dos conhecimentos além de estimular a lógica da construção de telas no flutter.
+
+# Resultado
+![iosP1](https://user-images.githubusercontent.com/37612961/191878919-24a09c1e-06ff-4e01-98b2-fc7349d09dd4.png)![iosP2](https://user-images.githubusercontent.com/37612961/191878922-3d5e7680-ebcf-4d09-b845-ae3a0c3278a3.png)
+
+![adP!](https://user-images.githubusercontent.com/37612961/191878910-728c4475-7905-458f-8031-97eff9c4af19.png)![adP2](https://user-images.githubusercontent.com/37612961/191878915-7ef61ef1-e9f8-482f-9702-1b1aeaa24696.png)
 ## Conheça o Flutter e cria apps lindos
 Este é um ponto de partida para uma aplicação Flutter. Alguns recursos para você começar se este for seu primeiro encontro com o Flutter:
 - [Laboratório: Escreva seu primeiro aplicativo Flutter](https://docs.flutter.dev/get-started/codelab)
@@ -54,11 +61,3 @@ MIT
    [Flutter]: <https://flutter.dev>
    [vs Code]: <https://code.visualstudio.com>
    [café]: <https://pt.wikipedia.org/wiki/Café>
-
-[comment]: <> (na tabela de pluqgin colocar  | Caixa de depósito | [plugins/dropbox/README.md][PlDb] | )
-   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
-   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
-   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
-   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
-   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
-   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
