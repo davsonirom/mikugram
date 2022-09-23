@@ -7,9 +7,35 @@ class CodicesSytema extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    final ThemeData tema = ThemeData();
+    return MaterialApp(
+      debugShowCheckedModeBanner: true,
+      theme: tema.copyWith(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 112, 222, 235),
+        colorScheme: tema.colorScheme.copyWith(
+          primary: Colors.cyan,
+          secondary: const Color.fromARGB(255, 144, 227, 154),
+        ),
+        textTheme: tema.textTheme.copyWith(
+          headlineLarge: const TextStyle(
+            fontFamily: 'MsMadi',
+            color: Colors.white,
+          ),
+          headlineMedium: const TextStyle(
+              fontFamily: 'DancingScript',
+              color: Colors.white,
+              fontSize: 15,
+              fontWeight: FontWeight.bold),
+          headlineSmall: const TextStyle(
+            fontFamily: 'UnicaOne',
+            color: Color.fromARGB(179, 255, 255, 255),
+            fontSize: 10,
+          ),
+        ),
+        iconTheme: tema.iconTheme.copyWith(color: Colors.white60),
+      ),
       title: 'Mikugram',
-      home: MikugramApp(),
+      home: const MikugramApp(),
     );
   }
 }
@@ -27,7 +53,8 @@ class _MikugramAppState extends State<MikugramApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Mikugram'),
+        title:
+            Text('Mikugram', style: Theme.of(context).textTheme.headlineLarge),
         actions: [
           IconButton(
             onPressed: () {},
@@ -45,6 +72,9 @@ class _MikugramAppState extends State<MikugramApp> {
       ),
       body: const FeeadPage(),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        selectedItemColor: Theme.of(context).colorScheme.secondary,
+        unselectedItemColor: Colors.white60,
         showSelectedLabels: false,
         showUnselectedLabels: false,
         iconSize: 33,
@@ -135,6 +165,7 @@ class FeeadPage extends StatelessWidget {
             curtidas: 2.3131,
             legenda:
                 'Hatsune Miku: Colorful Stage!, conhecido na Ásia como Project Sekai: Colorful Stage! Parceria. Hatsune Miku, é um jogo de ritmo para celular japonês desenvolvido pela Colorful Palette, um estúdio da CyberAgents Craft Egg, e publicado pela Sega Corporation',
+            comentarios: 324,
           ),
           const Post(
             post: 'assets/post/foto2.jpeg',
@@ -143,6 +174,7 @@ class FeeadPage extends StatelessWidget {
             curtidas: 203,
             legenda:
                 'Hatsune Miku (em japonês: 初音ミク; também chamada Miku Hatsune) é um software de voicebank para Vocaloid desenvolvida pela Crypton Future Media',
+            comentarios: 100,
           ),
           const Post(
             post: 'assets/post/foto3.jpg',
@@ -150,6 +182,7 @@ class FeeadPage extends StatelessWidget {
             usuarioNome: 'meiko_vocal',
             curtidas: 2.000,
             legenda: 'Hatsune Miku love you',
+            comentarios: 6,
           ),
         ],
       ),
@@ -207,15 +240,11 @@ class MeusInfluences extends StatelessWidget {
                     color: const Color.fromARGB(255, 111, 177, 117),
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(2.0),
+                  child: Padding(
+                    padding: const EdgeInsets.all(2.0),
                     child: Text(
                       'AO VIVO',
-                      style: TextStyle(
-                        fontSize: 10,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),
                 ),
@@ -244,7 +273,10 @@ class MeusInfluences extends StatelessWidget {
             ),
           ],
         ),
-        Text(user),
+        Text(
+          user,
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
       ],
     );
   }
@@ -258,13 +290,15 @@ class Post extends StatelessWidget {
       required this.usuarioAvatar,
       required this.usuarioNome,
       required this.curtidas,
-      this.legenda});
+      this.legenda,
+      this.comentarios});
 
   final String post;
   final String usuarioAvatar;
   final String usuarioNome;
   final double curtidas;
   final String? legenda;
+  final int? comentarios;
 
   @override
   Widget build(BuildContext context) {
@@ -305,7 +339,10 @@ class Post extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 4.0),
-                child: Text(usuarioNome),
+                child: Text(
+                  usuarioNome,
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
               ),
             ]),
           ),
@@ -349,8 +386,14 @@ class Post extends StatelessWidget {
               ],
             ),
             // curtidas e leganda
-            Text('$curtidas curtidas'),
+            Text(
+              '$curtidas curtidas',
+            ),
             Text(legenda ?? ''),
+            Text(
+              'ver todos dos $comentarios comentarios',
+              style: const TextStyle(color: Colors.black45),
+            ),
           ],
         ),
       ),
