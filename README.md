@@ -17,9 +17,10 @@
 >O objetivo primordial é promover a prática dos conhecimentos além de estimular a lógica da construção de telas no flutter.
 
 # Resultado
-![iosP1](https://user-images.githubusercontent.com/37612961/191878919-24a09c1e-06ff-4e01-98b2-fc7349d09dd4.png)![iosP2](https://user-images.githubusercontent.com/37612961/191878922-3d5e7680-ebcf-4d09-b845-ae3a0c3278a3.png)
+![BeFunky-collage-2](https://user-images.githubusercontent.com/37612961/191882268-6bec9bea-13b9-4c50-839c-cf1bf01fe721.png)
 
-![adP!](https://user-images.githubusercontent.com/37612961/191878910-728c4475-7905-458f-8031-97eff9c4af19.png)![adP2](https://user-images.githubusercontent.com/37612961/191878915-7ef61ef1-e9f8-482f-9702-1b1aeaa24696.png)
+![BeFunky-collage](https://user-images.githubusercontent.com/37612961/191882270-d31c9b94-7926-4f8f-9d07-a37f84003745.png)
+
 ## Conheça o Flutter e cria apps lindos
 Este é um ponto de partida para uma aplicação Flutter. Alguns recursos para você começar se este for seu primeiro encontro com o Flutter:
 - [Laboratório: Escreva seu primeiro aplicativo Flutter](https://docs.flutter.dev/get-started/codelab)
