@@ -36,7 +36,7 @@ Para obter ajuda para começar com o desenvolvimento do Flutter, consulte a [doc
 
 ## Instalação Mikugram
 
-Projeto desenvolvido em Flutter, partindo do pre-suposto que já tenha em mãos o ambitende de ecodesenvolvimento flutter tontamente funcional em sua máquina.
+Projeto desenvolvido em Flutter, partindo do pressuposto que já tenha em mãos o ambiente de desenvolvimento totalmente funcional em sua máquina.
 
 Clone o repositório
 ```sh
